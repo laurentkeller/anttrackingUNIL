@@ -3,7 +3,7 @@
  *  
  *
  *  Created by Danielle Mersch on 7/28/10.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *  Copyright 2010 __UNIL__. All rights reserved.
  *
  */
 
