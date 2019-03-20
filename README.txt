@@ -27,7 +27,7 @@ cmake ..
 4. Compile
 make
 
-5. Optinally, but recommended if trk-vid-overlay needs to be compiled lateron, install the headers
+5. Optinally, but recommended if trk-vid-overlay needs to be compiled later on, install the headers and "atrkutil" library
 sudo make install
 
 6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
