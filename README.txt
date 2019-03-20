@@ -8,31 +8,59 @@ Information:
 The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data 
  
 #######################################################################################################################################
-Installation instructions (linux):
+Installation instructions (linux only for now)
 
-1. Download the repository content (anttrackingUNIL-master.zip file) 
-2. Unzip the anttrackingUNIL-master.zip file
-3. Create a folder which will hold all executables files (the full path to that folder is later referred to as 'executable_path')
-4. Open a command window
-5. Navigate to the anttrackingUNIL-master folder
+The project contains a cmake build system. Preferrably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
+Instructions for compilation without cmake are given below.
+
+#### With cmake
+1. Navigate to the project folder
+cd anttrackingUNIL
+
+2. Make and enter build folder
+mkdir build
+cd build
+
+3. Generate
+cmake ..
+
+4. Compile
+make
+
+5. Optinally, but recommended if trk-vid-overlay needs to be compiled lateron, install the headers
+sudo make install
+
+6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
+./change_tagid
+
+#### Without cmake:
+
+1. Download and unzip or clone the repository content (anttrackingUNIL-master.zip file) 
+2. Create a folder which will hold all executables files (the full path to that folder is later referred to as 'executable_path')
+3. Open a command window and navigate to the anttrackingUNIL-master folder
 
 ###Installation of main analysis programs ####
-6. Run the following commands:
+4. Run the following commands:
 
-g++ -o executable_path/change_tagid change_tagid.cpp exception.cpp utils.cpp datfile.cpp tags3.cpp;
-g++ -o executable_path/controldat controldat.cpp datfile.cpp tags3.cpp exception.cpp;
-g++ -o executable_path/define_death define_death.cpp exception.cpp datfile.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/filter_interactions_cut_immobile filter_interactions_cut_immobile.cpp exception.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/filter_interactions_no_cut filter_interactions_no_cut.cpp exception.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/heatmap3_tofile heatmap3_tofile.cpp datfile.cpp exception.cpp tags3.cpp histogram.cpp statistics.cpp utils.cpp;
-g++ -o executable_path/interaction_all_close_contacts interaction_all_close_contacts.cpp exception.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/interaction_any_overlap interaction_any_overlap.cpp exception.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/interaction_close_front_contacts interaction_close_front_contacts.cpp exception.cpp tags3.cpp utils.cpp;
-g++ -o executable_path/time_investment time_investment.cpp exception.cpp utils.cpp plume.cpp datfile.cpp tags3.cpp;
-g++ -o executable_path/trackconverter trackconverter_modular.cpp exception.cpp tags3.cpp utils.cpp trackconverter_functions.cpp;
-g++ -o executable_path/trajectory trajectory.cpp datfile.cpp exception.cpp tags3.cpp;
-g++ -o executable_path/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp datfile.cpp;
+cd src
+mkdir build
 
+g++ -o build/change_tagid change_tagid.cpp exception.cpp utils.cpp datfile.cpp tags3.cpp -I ../inc;
+g++ -o build/controldat controldat.cpp datfile.cpp tags3.cpp exception.cpp -I ../inc;
+g++ -o build/define_death define_death.cpp exception.cpp datfile.cpp tags3.cpp utils.cpp -I ../inc
+g++ -o build/filter_interactions_cut_immobile filter_interactions_cut_immobile.cpp exception.cpp tags3.cpp utils.cpp -I ../inc;
+g++ -o build/filter_interactions_no_cut filter_interactions_no_cut.cpp exception.cpp tags3.cpp utils.cpp -I ../inc;
+g++ -o build/heatmap3_tofile heatmap3_tofile.cpp datfile.cpp exception.cpp tags3.cpp histogram.cpp statistics.cpp utils.cpp -I ../inc;
+g++ -o build/interaction_all_close_contacts interaction_all_close_contacts.cpp exception.cpp tags3.cpp utils.cpp -I ../inc;
+g++ -o build/interaction_any_overlap interaction_any_overlap.cpp exception.cpp tags3.cpp utils.cpp -I ../inc;
+g++ -o build/interaction_close_front_contacts interaction_close_front_contacts.cpp exception.cpp tags3.cpp utils.cpp -I ../inc;
+g++ -o build/time_investment time_investment.cpp exception.cpp utils.cpp plume.cpp datfile.cpp tags3.cpp -I ../inc;
+g++ -o build/trackconverter trackconverter_modular.cpp exception.cpp tags3.cpp utils.cpp trackconverter_functions.cpp -I ../inc;
+g++ -o build/trajectory trajectory.cpp datfile.cpp exception.cpp tags3.cpp -I ../inc;
+g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp datfile.cpp -I ../inc;
+
+5. The executables are then built in the folder anttrackingUNIL/src/build/, for usge instructions type for example:
+./change_tagid
 
 ###Installation of Antorient ####
 7. Unzip the Antorient.zip file

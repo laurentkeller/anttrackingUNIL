@@ -18,14 +18,14 @@
 #include <cstdlib>
 #include <getopt.h>
 
-#include <libants/datfile.h>
-#include <libants/exception.h>
-#include <libants/tags3.h>
-#include <libants/colormap.h>
-#include <libants/histogram.h>
-#include <libants/statistics.h>
-#include <libants/utils.h>
-#include <libants/trackcvt.h>
+#include <datfile.h>
+#include <exception.h>
+#include <tags3.h>
+#include <colormap.h>
+#include <histogram.h>
+#include <statistics.h>
+#include <utils.h>
+#include <trackcvt.h>
 
 using namespace std;
 
