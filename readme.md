@@ -5,30 +5,40 @@ for manuscript [Social network plasticity decreases disease transmission in a eu
 
 The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data 
  
-## Installation instructions (linux only)
+## Pipeline installation instructions (linux only)
 
 The project contains a cmake build system. Preferrably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
 Instructions for compilation without cmake are given below.
 
 ### With cmake
 1. Navigate to the project folder
+```shell
 cd anttrackingUNIL
+```
 
 2. Make and enter build folder
+```shell
 mkdir build
 cd build
 
+
 3. Generate
+```shell
 cmake ..
+```
 
 4. Compile
+```shell
 make
+```
 
 5. Optinally, but recommended if trk-vid-overlay needs to be compiled later on, install the headers and "atrkutil" library
 sudo make install
 
 6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
+```shell
 ./change_tagid
+```
 
 ### Without cmake:
 
@@ -39,9 +49,12 @@ sudo make install
 #### Installation of main analysis programs
 4. Run the following commands:
 
+```shell
 cd src
 mkdir build
+```
 
+```shell
 g++ -o build/change_tagid change_tagid.cpp exception.cpp utils.cpp datfile.cpp tags3.cpp -I ../inc;
 g++ -o build/controldat controldat.cpp datfile.cpp tags3.cpp exception.cpp -I ../inc;
 g++ -o build/define_death define_death.cpp exception.cpp datfile.cpp tags3.cpp utils.cpp -I ../inc
@@ -55,16 +68,21 @@ g++ -o build/time_investment time_investment.cpp exception.cpp utils.cpp plume.c
 g++ -o build/trackconverter trackconverter_modular.cpp exception.cpp tags3.cpp utils.cpp trackconverter_functions.cpp -I ../inc;
 g++ -o build/trajectory trajectory.cpp datfile.cpp exception.cpp tags3.cpp -I ../inc;
 g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp datfile.cpp -I ../inc;
+```
 
 5. The executables are then built in the folder anttrackingUNIL/src/build/, for usge instructions type for example:
+```shell
 ./change_tagid
+```
 
 ## Installation of Antorient 
 7. Unzip the Antorient.zip file
 8. In the command window, navigate to the Antorient folder, and run the following commands:
+```shell
 make clean
 make
+```
 9. Copy the executable file named 'datcorr', which was produced within the Antorient folder during step 7, into the executable_path folder 
 
-## Plume (windows only)
+## Installation of Plume (windows only)
 10. Unzip the Plume.zip file
