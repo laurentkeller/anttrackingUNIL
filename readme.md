@@ -1,19 +1,16 @@
-#######################################################################################################################################
+# Tracking Data Post Processing Software
+for manuscript [Social network plasticity decreases disease transmission in a eusocial insect](http://doi.org/10.1126/science.aat4793)
 
-TRACKING DATA PROCESSING SOFTWARE FOR MANUSCRIPT 'Social network plasticity decreases disease transmission in a eusocial insect'
-
-#######################################################################################################################################
-Information:
+## Information:
 
 The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data 
  
-#######################################################################################################################################
-Installation instructions (linux only for now)
+## Installation instructions (linux only)
 
 The project contains a cmake build system. Preferrably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
 Instructions for compilation without cmake are given below.
 
-#### With cmake
+### With cmake
 1. Navigate to the project folder
 cd anttrackingUNIL
 
@@ -33,13 +30,13 @@ sudo make install
 6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
 ./change_tagid
 
-#### Without cmake:
+### Without cmake:
 
 1. Download and unzip or clone the repository content (anttrackingUNIL-master.zip file) 
 2. Create a folder which will hold all executables files (the full path to that folder is later referred to as 'executable_path')
 3. Open a command window and navigate to the anttrackingUNIL-master folder
 
-###Installation of main analysis programs ####
+#### Installation of main analysis programs
 4. Run the following commands:
 
 cd src
@@ -62,12 +59,12 @@ g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp
 5. The executables are then built in the folder anttrackingUNIL/src/build/, for usge instructions type for example:
 ./change_tagid
 
-###Installation of Antorient ####
+## Installation of Antorient 
 7. Unzip the Antorient.zip file
 8. In the command window, navigate to the Antorient folder, and run the following commands:
 make clean
 make
 9. Copy the executable file named 'datcorr', which was produced within the Antorient folder during step 7, into the executable_path folder 
 
-###Plume ####
-10. Unzip the Plume.zip file (Please note that the executable contained in the Plume folder is a Windows executable only)
+## Plume (windows only)
+10. Unzip the Plume.zip file
