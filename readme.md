@@ -32,7 +32,7 @@ cmake ..
 make
 ```
 
-5. Optinally, but recommended if trk-vid-overlay needs to be compiled later on, install the headers and "atrkutil" library
+5. Optinally, but recommended if [trk-vid-overlay](https://github.com/laurentkeller/trk-vid-overlay) needs to be compiled later on, install the headers and `atrkutil` library
 ```shell
 sudo make install
 ```
@@ -45,7 +45,7 @@ sudo make install
 ### Without cmake:
 
 1. Download and unzip or clone the repository content (anttrackingUNIL-master.zip file) 
-2. Create a folder which will hold all executables files (the full path to that folder is later referred to as 'executable_path')
+2. Create a folder which will hold all executables files (the full path to that folder is later referred to as `build`)
 3. Open a command window and navigate to the anttrackingUNIL-master folder
 
 #### Installation of main analysis programs
