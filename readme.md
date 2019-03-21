@@ -20,7 +20,7 @@ cd anttrackingUNIL
 ```shell
 mkdir build
 cd build
-
+```
 
 3. Generate
 ```shell
@@ -33,7 +33,9 @@ make
 ```
 
 5. Optinally, but recommended if trk-vid-overlay needs to be compiled later on, install the headers and "atrkutil" library
+```shell
 sudo make install
+```
 
 6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
 ```shell
