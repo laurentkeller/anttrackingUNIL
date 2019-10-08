@@ -37,7 +37,7 @@ make
 sudo make install
 ```
 
-6. The executables can be found in anttrackingUNIL/build, for usge instructions type for example:
+6. The executables can be found in anttrackingUNIL/build/bin, for usge instructions type for example:
 ```shell
 ./change_tagid
 ```
