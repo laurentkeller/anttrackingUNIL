@@ -77,7 +77,9 @@ g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp
 ./change_tagid
 ```
 
-## Installation of Antorient 
+## Installation of Antorient
+Preliminaries: You need to install wxWidgets 3.0.0 beforehand. On Ubuntu/Debian, you can do as described here:
+https://wiki.codelite.org/pmwiki.php/Main/WxWidgets30Binaries#toc2
 7. Unzip the Antorient.zip file
 8. In the command window, navigate to the Antorient folder, and run the following commands:
 ```shell
