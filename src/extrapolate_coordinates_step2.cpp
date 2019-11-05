@@ -1,8 +1,8 @@
 /*
  *  correct_dat.cpp
  *  program that takes and datfile and text file as input and write a new datfile
- *	The input datfile 
- 
+ *	The input datfile
+
  *  Created by Danielle on 28.4.2011.
  *  Copyright 2011 __UNIL__. All rights reserved.
  *
@@ -58,83 +58,90 @@ bool find_index(int tag, int& idx){
 //==========================================================
 int main(int argc, char* argv[]){
 try{
-	
+
 	// test whether all parameters are presen
 	if (argc != 4){
 		string info = (string) argv[0] + " input.dat input.txt output.dat";
 		throw Exception(USE, info);
 	}
-	
-	// opens input files	
+
+	// opens input files
 	DatFile datin;
 	datin.open((string) argv[1], 0);
-		
+
 	// opens text file
 	ifstream f;
 	f.open(argv[2]);
 	if(!f.is_open()){
 		throw(CANNOT_OPEN_FILE, (string) argv[2]);
 	}
-	
+
 	// test whether output datfile exists already, and creates output file
 	DatFile datout;
-	datout.create_dat((string) argv[3]);
-	
-	
-	// structures 
+	// datout.create_dat((string) argv[3]);
+  datout.copy((string) argv[1], (string) argv[3]);
+  datout.open((string) argv[3], true);
+
+  datin.close();
+
+	// structures
 	map<int,tag_table*> frames_to_correct;
-	
+
 	// read input text file
 	cout<<"reading frames to correct from input file ..."<<endl;
 	while(!f.eof()){
 		string s;
 		istringstream ss;
-		int frame (0);
+		/*int frame (0);
 		int tag (-1);
 		int id (-1);
 		int x(-1);
 		int y(-1);
-		int a(-1);
+		int a(-1);*/
+    unsigned int frame = 0;
+    int boxid = 0;
 		// read data from input
 		getline(f,s);
 		if (!s.empty()){
 			if (s[0]=='#'){
 				getline(f,s);
 			}
+      tag_pos temp_tag;
 			//cout<<"line read: "<<s<<endl;
 			ss.str(s);
 			ss>>frame;
 			ss.ignore(1, ',');
-			ss>>tag;
+			ss>>temp_tag.id;
 			//cout<<"Tag "<<tag<<endl;
 			ss.ignore(1,',');
-			ss>>id;
+			ss>>boxid;
 			ss.ignore(1,',');
-			ss>>x;
+			ss>>temp_tag.x;
 			ss.ignore(1,',');
-			ss>>y;
+			ss>>temp_tag.y;
 			ss.ignore(1,',');
-			ss>>a;
+			ss>>temp_tag.a;
+      datout.write_tag(frame, temp_tag);
 			// create new tag_table and initialize with -1
-			tag_table* temp = new tag_table[1];
-			memset (temp, 0, sizeof(tag_table));
+			//tag_table* temp = new tag_table[1];
+			//memset (temp, 0, sizeof(tag_table));
 			//find index of tag and fill temp structure
-			int idx(-1);
+			/*int idx(-1);
 			if (!find_index(tag, idx)){
 				ostringstream ss;
 				ss<<tag;
 				string info = ss.str();
 				throw Exception(TAG_NOT_FOUND, info);
-			}
-			(*temp)[idx].state = true;
+			}*/
+			/*(*temp)[idx].state = true;
 			(*temp)[idx].box = id;
 			(*temp)[idx].x = x;
 			(*temp)[idx].y = y;
-			(*temp)[idx].a = a;
+			(*temp)[idx].a = a;*/
 			// check whether frame is already among frames to correct, if not add it
-			map <int, tag_table*>::iterator it_tags;
-			it_tags = frames_to_correct.find(frame);
-			if (it_tags == frames_to_correct.end()){
+			/*map <int, tag_table*>::iterator it_tags;
+			it_tags = frames_to_correct.find(frame);*/
+			/*if (it_tags == frames_to_correct.end()){
 				frames_to_correct[frame] = temp;
 			// if the frame is already in the list, add another tag for correction
 			}else{
@@ -143,17 +150,20 @@ try{
 				(*frames_to_correct[frame])[idx].x = x;
 				(*frames_to_correct[frame])[idx].y = y;
 				(*frames_to_correct[frame])[idx].a = a;
-			}
+			}*/
 		}
 	}
 	f.close();
-	
+  datout.close();
+
 	// read input datfile and write corrected output
-	cout<<"Input file read. Now about to open dat file..."<<endl;
-	
+	/*cout<<"Input file read. Now about to open dat file..."<<endl;
+
 	while(!datin.eof()){
 		framerec temp;
 		if (datin.read_frame(temp)){
+      // This frame from datin needs to be corrected
+      // Datin is only used to loop through the frame numbers, the read frame is directly written to the output if it does not need to be corrected
 			if (frames_to_correct.find(temp.frame) != frames_to_correct.end()){
 				//cout<<"tag(s) being changed in frame "<<temp.frame<<endl;
 				for (int i(0); i < tag_count; i++){
@@ -168,12 +178,9 @@ try{
 			}
 			datout.write_frame(&temp);
 		}
-	}
+	}*/
 
 	return 0;
 }catch (Exception e) {
 }
 }
-
-
-
