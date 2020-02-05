@@ -20,6 +20,11 @@ target_link_libraries(filter_interactions_no_cut atrkutil)
 add_executable(heatmap3_tofile heatmap3_tofile.cpp histogram.cpp statistics.cpp)
 target_link_libraries(heatmap3_tofile atrkutil)
 
+add_executable(interaction interaction_tags3_corrected.cpp)
+target_link_libraries(interaction atrkutil)
+
+# The following 3 interaction prorgams are versions specific to the Science 2018 paper.
+# The one above is the standard version.
 add_executable(interaction_all_close_contacts interaction_all_close_contacts.cpp)
 target_link_libraries(interaction_all_close_contacts atrkutil)
 
@@ -40,5 +45,11 @@ target_link_libraries(trajectory atrkutil)
 
 add_executable(zone_converter zone_converter.cpp plume.cpp)
 target_link_libraries(zone_converter atrkutil)
+
+add_executable(extrapolate_step1 extrapolate_coordinates_step1.cpp)
+target_link_libraries(extrapolate_step1 atrkutil)
+
+add_executable(extrapolate_step2 extrapolate_coordinates_step2.cpp)
+target_link_libraries(extrapolate_step2 atrkutil)
 
 install(TARGETS atrkutil LIBRARY DESTINATION lib)
