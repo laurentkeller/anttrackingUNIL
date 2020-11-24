@@ -1,11 +1,11 @@
   /*
- *  interaction.cpp
+ *  interaction_any_overlap.cpp
  *  --> reads through dat file and check for every frame and every pair of tags whether they are interacting. If so they are written to and outfile
  *
- *  Created by Danielle Mersch on 11/10/10.
- *  Modified by Nathalie Stroeymeyt (NS) in June 2016.
- *  Copyright 2010 __UNIL__. All rights reserved.
- *
+ *  Created by Danielle Mersch and Alessandro Crespi in 2010.
+ *  Modified by Nathalie Stroeymeyt (NS) in 2016.
+ *  Copyright UNIL and EPFL. All rights reserved. 
+ *  
  */
 
 
