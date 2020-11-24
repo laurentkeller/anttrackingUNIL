@@ -1,21 +1,12 @@
-/** @file trackconverter.cc
- *  \brief The program trackconverter.cpp sorts the frames of the csv files and writes a ordered csv file (part 1)
- *		   and then converts the ordered csv files into a dat file (part 2).
- *	
- *  Part 1: 
- *	reads through all csv input files to determine wether the frames are 1. all present, 2. ordered and 3. complete 
- *  unordered frames are sorted and missing or incomplete frames filled with -1 data
- *  the program writes for each file with problems a corrected output file labeled with _corr before the extension and creates a list
- *  (framelist2) with the names of the files in order for part2
- *  Part 2:
- *	read sorted csv files, remove double detections and false postives within the same frame and converts the csv files to a single binary
- *	file. The program checks for each frame whether a given tag is detected twice. if a tag is detected twice in the same frame, 
- *	the program calculates the distance between the 2 detections, if the distance is smaller than P_TH -a precision threshold- 
- *	then the first detection is kept. If the distance exceeds P_TH then the distance and angle of each detection to the previous 
- *	detection is calculated and the detection resulting in the smaller distance and angle is kept. if the angle and distance give 
- *	conflicting information, the first detection is kept and a warning is written to the cout. The program outputs a resumee on 
- *	the number of false positives (this includes double detections due to overlaps!) number and times unkown markers were detected, etc. 
+/*
+ *  trackconverter_functions.h
+ *  
+ *
+ *  Created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved.
+ *
  */
+
 
 #include <iostream>
 #include <fstream>
