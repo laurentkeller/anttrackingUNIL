@@ -2,8 +2,8 @@
  *  interaction.cpp
  *  --> reads through dat file and check for every frame and every pair of tags whether they are interacting. If so they are written to and outfile
  *
- *  Created by Danielle Mersch on 11/10/10.
- *  Copyright 2010 __UNIL__. All rights reserved.
+ *  Created by Danielle Mersch and Alessandro Crespi.
+ *  Copyright UNIL and EPFL. All rights reserved.
  *
  */
 
