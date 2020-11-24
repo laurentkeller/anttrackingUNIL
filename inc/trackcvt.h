@@ -1,3 +1,12 @@
+/*
+ *  trackcvt.h
+ *  
+ *
+ *  Created by Alessandro Crespi.
+ *  Copyright EPFL. All rights reserved.
+ *
+ */
+
 #ifndef __TRACKCVT_H
 #define __TRACKCVT_H
 
