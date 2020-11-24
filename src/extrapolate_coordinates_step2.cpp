@@ -1,11 +1,8 @@
 /*
- *  correct_dat.cpp
- *  program that takes and datfile and text file as input and write a new datfile
- *	The input datfile
-
- *  Created by Danielle on 28.4.2011.
- *  Copyright 2011 __UNIL__. All rights reserved.
+ *  extrapolate_coordinates_step2.cpp
  *
+ *  Modified by Nathalie Stroeymeyt in 2016 based on a program created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved. *
  */
 
 
