@@ -1,5 +1,5 @@
 /*
- *  extrapolate_coordinates_May2016.cpp
+ *  extrapolate_coordinates_step1.cpp
  *  program that takes datfile and tag file as input and write a textfile
  *	The input datfile 
  
