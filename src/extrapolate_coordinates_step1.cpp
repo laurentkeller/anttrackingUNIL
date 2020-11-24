@@ -1,8 +1,5 @@
 /*
  *  extrapolate_coordinates_step1.cpp
- *  program that takes datfile and tag file as input and write a textfile
- *	The input datfile 
- 
  *  Modified by Nathalie Stroeymeyt in 2016 based on a program created by Danielle Mersch.
  *  Copyright UNIL. All rights reserved.
  *
