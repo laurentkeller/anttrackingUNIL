@@ -1,3 +1,12 @@
+/*
+ *  colormap.h
+ *  
+ *
+ *  Created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved.
+ *
+ */
+
 #ifndef __COLORMAP_H
 #define __COLORMAP_H
 
