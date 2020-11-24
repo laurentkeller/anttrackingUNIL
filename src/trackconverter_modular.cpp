@@ -1,4 +1,10 @@
-/** @file trackconverter.cc
+/* @file trackconverter_modular.cpp
+ *  
+ *
+ *  Created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved.
+ *
+ *
  *  \brief The program trackconverter.cpp sorts the frames of the csv files and writes a ordered csv file (part 1)
  *		   and then converts the ordered csv files into a dat file (part 2).
  *	

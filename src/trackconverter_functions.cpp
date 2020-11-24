@@ -1,4 +1,11 @@
-
+/* @file trackconverter_functionsr.cpp
+ *  
+ *
+ *  Created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved.
+ *
+ *
+ */
 
 #include "trackconverter_functions.h"
 
