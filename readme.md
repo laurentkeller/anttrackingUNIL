@@ -7,7 +7,7 @@ The repository https://github.com/laurentkeller/anttrackingUNIL contains tools f
  
 ## Pipeline installation instructions (linux only)
 
-The project contains a cmake build system. Preferrably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
+The project contains a cmake build system. Preferably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
 Instructions for compilation without cmake are given below.
 
 ### With cmake
@@ -32,12 +32,12 @@ cmake ..
 make
 ```
 
-5. Optinally, but recommended if [trk-vid-overlay](https://github.com/laurentkeller/trk-vid-overlay) needs to be compiled later on, install the headers and `atrkutil` library
+5. Optionally, but recommended if [trk-vid-overlay](https://github.com/laurentkeller/trk-vid-overlay) needs to be compiled later on, install the headers and `atrkutil` library
 ```shell
 sudo make install
 ```
 
-6. The executables can be found in anttrackingUNIL/build/bin, for usge instructions type for example:
+6. The executables can be found in anttrackingUNIL/build/bin, for usage instructions type for example:
 ```shell
 ./change_tagid
 ```
