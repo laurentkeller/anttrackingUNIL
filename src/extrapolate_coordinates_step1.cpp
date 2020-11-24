@@ -3,8 +3,8 @@
  *  program that takes datfile and tag file as input and write a textfile
  *	The input datfile 
  
- *  Created by Danielle on 08.5.2016.
- *  Copyright 2016 __UNIL__. All rights reserved.
+ *  Modified by Nathalie Stroeymeyt in 2016 based on a program created by Danielle Mersch.
+ *  Copyright UNIL. All rights reserved.
  *
  */
 
