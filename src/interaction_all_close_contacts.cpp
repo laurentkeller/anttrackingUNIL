@@ -4,7 +4,7 @@
  *
  *  Created by Danielle Mersch and Alessandro Crespi in 2010.
  *  Modified by Nathalie Stroeymeyt (NS) in 2016.
- *  Copyright UNIL and EPFL. All rights reserved. 
+ *  Copyright UNIL and Alessandro Crespi. All rights reserved. 
  *  
  */
 
