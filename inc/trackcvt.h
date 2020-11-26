@@ -3,7 +3,7 @@
  *  
  *
  *  Created by Alessandro Crespi.
- *  Copyright EPFL. All rights reserved.
+ *  Copyright Alessandro Crespi. All rights reserved.
  *
  */
 
