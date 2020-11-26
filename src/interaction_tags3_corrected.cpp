@@ -3,7 +3,7 @@
  *  --> reads through dat file and check for every frame and every pair of tags whether they are interacting. If so they are written to and outfile
  *
  *  Created by Danielle Mersch and Alessandro Crespi.
- *  Copyright UNIL and EPFL. All rights reserved.
+ *  Copyright UNIL and Alessandro Crespi. All rights reserved.
  *
  */
 
