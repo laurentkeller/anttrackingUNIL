@@ -1,9 +1,30 @@
 # Tracking Data Post Processing Software
 for manuscript [Social network plasticity decreases disease transmission in a eusocial insect](http://doi.org/10.1126/science.aat4793)
-
+65;6003;1c
 ## Information:
 
-The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data.
+The repository https://github.com/laurentkeller/anttrackingUNIL
+contains tools for the processing and analysis of automated tracking
+data.
+
+> Although this repository is under GPL version 3, it depends on the
+> AntOrient software that has no license yet. It means that nobody at
+> the exception of the copyright holders have the right to use it.
+>
+> Yes, it means that if you are not a copyright holder, you are not
+> allowed to even compile it.
+>
+> UNIL, one of the two copyright holder, have asked the
+> other copyright holder to license this software with a license
+> compatible with GPLv3. We believe that it will benefit the whole
+> scientific community.
+>
+> This request is not yet positively answered.
+>
+> If you want to use AntOrient and are not a copyright holder, you
+> must expressly ask permission to do so to both of the copyright
+> holder.
+
 
 ## Pipeline installation instructions (linux only)
 
@@ -79,6 +100,9 @@ g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp
 
 ## Installation of Antorient (linux)
 
+> Please note, since there are no license for this software yet, that
+> if you are not a copyright holder, you must ask permission to both
+> copyright holders to use AntOrient.
 
 ### 1. Preliminaries: wxWidgets
 
