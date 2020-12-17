@@ -1,0 +1,3 @@
+[submodule "AntOrient"]
+	path = AntOrient
+	url = https://github.com/laurentkeller/AntOrient.git

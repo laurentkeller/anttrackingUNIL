@@ -3,8 +3,8 @@ for manuscript [Social network plasticity decreases disease transmission in a eu
 
 ## Information:
 
-The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data 
- 
+The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data.
+
 ## Pipeline installation instructions (linux only)
 
 The project contains a cmake build system. Preferably cmake is used, because it allows to install the header files, so the trk-vid-overlay project (which also contains a cmake build system) can be compiled very easily as well. The minimum cmake version required is 3.10, but it might be possible to use an older version. In that case, the first line in the file anttrackingUNIL/CMakeLists.txt needs to be changed accordingly. cmake can be downloaded here: cmake.org or on ubuntu via "sudo apt install cmake".
@@ -44,7 +44,7 @@ sudo make install
 
 ### Without cmake:
 
-1. Download and unzip or clone the repository content (anttrackingUNIL-master.zip file) 
+1. Download and unzip or clone the repository content (anttrackingUNIL-master.zip file)
 2. Create a folder which will hold all executables files (the full path to that folder is later referred to as `build`)
 3. Open a command window and navigate to the anttrackingUNIL-master folder
 
@@ -78,18 +78,42 @@ g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp
 ```
 
 ## Installation of Antorient (linux)
-Preliminaries: You need to install wxWidgets 3.0.0 beforehand. On Ubuntu/Debian, you can do as described here:
+
+
+### 1. Preliminaries: wxWidgets
+
+You need to install wxWidgets 3.0.0 beforehand. On Ubuntu/Debian, you
+can do as described here:
 https://wiki.codelite.org/pmwiki.php/Main/WxWidgets30Binaries#toc2
 
-7. Download the Antorient folder on your computer
-8. In the command window, navigate to the Antorient folder, and run the following commands:
+### 2. Download the AntOrient sources.
+
+AntOrient is the fruit of a collaboration with Alessandro Crespi and
+the original sources are hosted on
+https://github.com/daniellemersch/AntOrient .
+
+As a courtesy, sources of this project are accessible as a git
+submodule. To fetch them, please run the following command:
+
+```shell
+git submodule update --init
+```
+
+### 3. Compilation of AntOrient
+
+In the command window, navigate to the Antorient folder, and run the
+following commands:
+
 ```shell
 make clean
 make
 ```
-9. Copy the executable file named 'datcorr', which was produced within the Antorient folder during step 7, into the build folder 
+
+### 4. Last step
+
+Copy the executable file named 'datcorr', which was produced within the Antorient folder during step 7, into the build folder
 
 ## Installation of Plume (windows only)
-10. Download the Plume folder on your computer
-11. Double-click on the Plume.exe executable
 
+1. Download the Plume folder on your computer
+2. Double-click on the Plume.exe executable
