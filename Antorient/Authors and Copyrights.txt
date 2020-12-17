@@ -1,8 +1,0 @@
-/* AntOrient programme suite
- *  
- *
- *  Created by Danielle Mersch and Alessandro Crespi.
- *  Copyright UNIL and Alessandro Crespi. All rights reserved.
- *
- *
- */
