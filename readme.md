@@ -1,9 +1,11 @@
 # Tracking Data Post Processing Software
 for manuscript [Social network plasticity decreases disease transmission in a eusocial insect](http://doi.org/10.1126/science.aat4793)
-
+65;6003;1c
 ## Information:
 
-The repository https://github.com/laurentkeller/anttrackingUNIL contains tools for the processing and analysis of automated tracking data.
+The repository https://github.com/laurentkeller/anttrackingUNIL
+contains tools for the processing and analysis of automated tracking
+data.
 
 ## Pipeline installation instructions (linux only)
 
@@ -79,6 +81,14 @@ g++ -o build/zone_converter zone_converter.cpp exception.cpp utils.cpp plume.cpp
 
 ## Installation of Antorient (linux)
 
+AntOrient is the fruit of a collaboration with Alessandro Crespi and
+the original sources are hosted on
+https://github.com/daniellemersch/AntOrient .
+
+> Please note, since there are no license for AntOrient yet, and
+> the license in this repository (GPLv3) does not apply to
+> AntOrient. It means that you need to ask permission to both
+> copyright holders to use AntOrient.
 
 ### 1. Preliminaries: wxWidgets
 
@@ -88,16 +98,13 @@ https://wiki.codelite.org/pmwiki.php/Main/WxWidgets30Binaries#toc2
 
 ### 2. Download the AntOrient sources.
 
-AntOrient is the fruit of a collaboration with Alessandro Crespi and
-the original sources are hosted on
-https://github.com/daniellemersch/AntOrient .
-
-As a courtesy, sources of this project are accessible as a git
-submodule. To fetch them, please run the following command:
+AntOrient sources are accessible thorugh a git submodule.
 
 ```shell
 git submodule update --init
 ```
+
+Sources will be downloaded in a new `AntOrient` subdirectory.
 
 ### 3. Compilation of AntOrient
 
@@ -105,6 +112,7 @@ In the command window, navigate to the Antorient folder, and run the
 following commands:
 
 ```shell
+cd AntOrient
 make clean
 make
 ```
